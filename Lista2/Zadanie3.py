@@ -1,5 +1,6 @@
 #import pylab
 import random
+import numpy
 licz_pr = 0
 licz_po = 0
 licz_pr_sr = 0
@@ -338,16 +339,16 @@ def date_zapisz(licz_po,licz_pr):
 
 
 if __name__ == '__main__':
-    k = 1
-    wq = [100, 200, 400,500, 600,700, 800, 1000]
+     k = 1
+     wq = [100, 200, 400,500, 600,700, 800, 1000]
    # wq = [100,200,400,600,800,1000]
-    n = int(input("Podaj długość tablicy :"))
+     n = int(input("Podaj długość tablicy :"))
 
-    gen = input("Podaj generator 1 liczbe losowe 2 Rosnącą , 3 Malejącą : ")
+     gen = input("Podaj generator 1 liczbe losowe 2 Rosnącą , 3 Malejącą : ")
 
-    print(" 1 QUICK SORT\n 2 Duo")
-    metod = input("Podajaj metod sortowania :")
-    while k != 0:
+     print(" 1 QUICK SORT\n 2 Duo")
+     metod = input("Podajaj metod sortowania :")
+     while k != 0:
 
             #print(tab)
         if gen == "1" :
@@ -356,12 +357,13 @@ if __name__ == '__main__':
             generator2_3(gen,metod,n)
         print(tab)
         tab = []
-        #licz_po_sr += licz_po
-       # licz_pr_sr += licz_pr
+        licz_po_sr += licz_po
+        licz_pr_sr += licz_pr
         k -=1
         licz_po = 0
         licz_pr = 0
-    #date_zapisz(str(licz_po_sr/n) + ",", str(licz_pr_sr/n) + ",")
+     date_zapisz(str(licz_po_sr/n) + ",", str(licz_pr_sr/n) + ",")
+     # date_zapisz( str(n* numpy.log(n)) + ",","")
    # data_odczyt()
         # file =
         # x = file.readline()
